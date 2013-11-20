@@ -20,9 +20,6 @@ public class PasswordManager {
      * @return
      */
     public boolean checkPassword(final String hash, final String salt, final String provided) {
-        // TODO: use salt and provided password, and chek if hashes match
-        // Pseudo code Hex.encode(SHA1(salt + provided)) equals hash
-        // You may use Spring's BCrypt also
         try {
             if (generateUserPasswordHash(provided, salt).equals(hash)) {
                 return true;

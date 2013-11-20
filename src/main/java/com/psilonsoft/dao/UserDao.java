@@ -42,12 +42,10 @@ public class UserDao {
     }
 
     /**
-     * For some reasons, someone left plain JDBC implementation - which is very very bad.
      * 
      * @param lastName
      * @return
      */
-    @SuppressWarnings("unchecked")
     public List<User> filterUsersByEmail(final String lastName) {
         return em.createQuery("from User where email like :lastName")
                 .setParameter("lastName", "%" + lastName + "%").getResultList();

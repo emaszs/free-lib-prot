@@ -1,4 +1,4 @@
-package com.psilonsoft.controller;
+package com.psilonsoft.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
